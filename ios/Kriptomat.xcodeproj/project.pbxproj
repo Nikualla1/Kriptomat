@@ -14,6 +14,9 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8FC1DE449BA17724C8966CAF /* libPods-Kriptomat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA7A74AA2452A0DDB30FE3F /* libPods-Kriptomat.a */; };
 		B1837F0CE3D7C93CA7945431 /* libPods-Kriptomat-KriptomatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DF0E8CF9C24EF478C0AA985 /* libPods-Kriptomat-KriptomatTests.a */; };
+		E2559E7DC35843BE82B646A3 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 04F36471E1014E019A43F9CF /* Montserrat-Regular.ttf */; };
+		32D6C6C0E2694DDDA0DBC13F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A766B6C8E6444B1A0C23008 /* Montserrat-Medium.ttf */; };
+		661DD03CC49E44A28BD447B1 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E51D6EDEAC7E4575B939D40E /* Montserrat-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F71B81634FDABF298BB3A422 /* Pods-Kriptomat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kriptomat.release.xcconfig"; path = "Target Support Files/Pods-Kriptomat/Pods-Kriptomat.release.xcconfig"; sourceTree = "<group>"; };
 		FF75DDDA1C6A605CDB9801D4 /* Pods-Kriptomat-KriptomatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kriptomat-KriptomatTests.debug.xcconfig"; path = "Target Support Files/Pods-Kriptomat-KriptomatTests/Pods-Kriptomat-KriptomatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		04F36471E1014E019A43F9CF /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; name = "Montserrat-Regular.ttf"; path = "../assets/fonts/Montserrat-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5A766B6C8E6444B1A0C23008 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; name = "Montserrat-Medium.ttf"; path = "../assets/fonts/Montserrat-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E51D6EDEAC7E4575B939D40E /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; name = "Montserrat-SemiBold.ttf"; path = "../assets/fonts/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8CD92B98CD33476C51AEA481 /* Pods */,
+				FDD8629A213D44E28D4B19D7 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +155,17 @@
 			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		FDD8629A213D44E28D4B19D7 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				04F36471E1014E019A43F9CF /* Montserrat-Regular.ttf */,
+				5A766B6C8E6444B1A0C23008 /* Montserrat-Medium.ttf */,
+				E51D6EDEAC7E4575B939D40E /* Montserrat-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +263,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				E2559E7DC35843BE82B646A3 /* Montserrat-Regular.ttf in Resources */,
+				32D6C6C0E2694DDDA0DBC13F /* Montserrat-Medium.ttf in Resources */,
+				661DD03CC49E44A28BD447B1 /* Montserrat-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
