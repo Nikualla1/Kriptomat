@@ -1,11 +1,12 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import Logo from '../assets/svg/Logo';
+
+import {LogoIcon} from '../assets/svg';
 
 function Header() {
   return (
     <View style={styles.wrapper}>
-      <Logo height={32} />
+      <LogoIcon height={32} />
     </View>
   );
 }
