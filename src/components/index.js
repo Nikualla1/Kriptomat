@@ -1,5 +1,6 @@
-import ScreenWrapper from './ScreenWrapper'
+import Header from './Header';
+import Footer from './Footer';
+import SearchInput from './SearchInput';
+import ScreenWrapper from './ScreenWrapper';
 
-export {
-    ScreenWrapper
-}
+export {Header, Footer, SearchInput, ScreenWrapper};
