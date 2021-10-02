@@ -6,10 +6,9 @@ import {colors} from '../constants/theme';
 function ScreenWrapper(props) {
   return (
     <React.Fragment>
-      <SafeAreaView style={{flex: 0, backgroundColor: colors.statusBar}} />
-      <SafeAreaView style={{flex: 1, backgroundColor: colors.statusBar}}>
+      <SafeAreaView style={styles.upperBar} />
+      <SafeAreaView style={styles.lowerBar}>
         <StatusBar
-          translucent
           backgroundColor={colors.statusBar}
           barStyle="light-content"
         />
@@ -22,7 +21,15 @@ function ScreenWrapper(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.onPrimary,
+  },
+  upperBar: {
+    flex: 0,
+    backgroundColor: colors.statusBar,
+  },
+  lowerBar: {
+    flex: 1,
+    backgroundColor: colors.statusBar,
   },
 });
 

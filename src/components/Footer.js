@@ -21,11 +21,13 @@ const styles = StyleSheet.create({
   wrapper: {
     padding: 16,
     backgroundColor: colors.onPrimary,
-    elevation: 14,
-    shadowColor: 'rgba(0, 0, 0, 0.16)',
+    borderRadius: 6,
+    elevation: 9,
     shadowOffset: {width: 0, height: 0},
+    shadowColor: 'black',
+    shadowOpacity: 0.16,
     shadowRadius: 6,
-    flexShrink: 0,
+    // flexShrink: 0,
   },
 });
 
