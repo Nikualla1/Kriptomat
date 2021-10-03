@@ -1,15 +1,15 @@
 import React, {useContext} from 'react';
 import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
 
-import {SortIcon} from '../../../assets/svg';
-import {colors} from '../../../constants/theme';
-import {CoinsContext} from '../../../context/CoinsContext';
+import {SortIcon} from '../assets/svg';
+import {colors} from '../constants/theme';
+import {CoinsContext} from '../context/CoinsContext';
 
-function SortingHeader() {
+function SortingHeader(props) {
   const {onPriceSort, onNameSort} = useContext(CoinsContext);
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, props.style]}>
       <TouchableOpacity onPress={onNameSort} style={styles.itemWrapper}>
         <Text style={styles.itemText}>Coin</Text>
         <SortIcon width={16} height={16} />

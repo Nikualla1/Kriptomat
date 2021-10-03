@@ -12,7 +12,7 @@ function ScreenWrapper(props) {
           backgroundColor={colors.statusBar}
           barStyle="light-content"
         />
-        <View style={styles.container}>{props.children}</View>
+        <View style={[styles.container, props.style]}>{props.children}</View>
       </SafeAreaView>
     </React.Fragment>
   );

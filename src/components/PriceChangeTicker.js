@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-import {Ticker} from '../../../assets/svg';
+import {Ticker} from '../assets/svg';
 
 function PriceChangeTicker({percentage}) {
   const fill = percentage >= 0 ? '#0DEAA9' : '#FF9696';

@@ -9,7 +9,7 @@ function SearchInput({value, onChange}) {
     <View style={styles.shadow}>
       <View style={styles.wrapper}>
         <View style={styles.icon}>
-          <SearchIcon width={20} height={20} />
+          <SearchIcon width={20} height={20} fill="#95989A" />
         </View>
         <TextInput
           value={value}

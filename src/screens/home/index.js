@@ -1,7 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 
-import {CoinItem, SortingHeader} from './components';
 import {CoinsContext} from '../../context/CoinsContext';
 import {
   Footer,
@@ -9,8 +8,9 @@ import {
   Loading,
   ScreenWrapper,
   SearchInput,
+  CoinDetailsItem,
+  SortingHeader,
 } from '../../components';
-
 
 function HomeScreen() {
   const [searchedText, setSearchedText] = useState('');
@@ -33,7 +33,7 @@ function HomeScreen() {
           data={coinsData}
           keyExtractor={el => el.id}
           ListHeaderComponent={() => <SortingHeader />}
-          renderItem={({item}) => <CoinItem item={item} />}
+          renderItem={({item}) => <CoinDetailsItem item={item} />}
           ItemSeparatorComponent={() => <View style={styles.seperator} />}
           showsVerticalScrollIndicator={false}
           stickyHeaderIndices={[0]}
@@ -50,10 +50,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     flex: 1,
   },
-  seperator:{
+  seperator: {
     height: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.05)'
-  }
+    backgroundColor: 'rgba(0, 0, 0, 0.05)',
+  },
 });
 
 export default HomeScreen;

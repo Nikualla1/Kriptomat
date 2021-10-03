@@ -1,20 +1,29 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {NavigationContext} from '@react-navigation/native';
 import {TouchableOpacity, View, Text, Image, StyleSheet} from 'react-native';
-import {PriceChangeTicker} from '.';
-import {colors} from '../../../constants/theme';
 
-function CoinItem({item}) {
+import {colors} from '../constants/theme';
+import PriceChangeTicker from './PriceChangeTicker';
+
+function CoinDetailsItem({item}) {
+  const navigation = useContext(NavigationContext);
+
   const {name, symbol, image, current_price, price_change_percentage_24h} =
     item;
 
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      onPress={() =>
+        navigation.navigate('Currency', item)
+      }
+      style={styles.container}>
       <Image source={{uri: image}} style={styles.image} />
       <View style={styles.infoContainer}>
         <View style={styles.itemsSeperator}>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.name}>
-            {'\u20AC'} {current_price}
+            {'\u20AC'}
+            {current_price}
           </Text>
         </View>
         <View style={styles.itemsSeperator}>
@@ -57,4 +66,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default CoinItem;
+export default CoinDetailsItem;
