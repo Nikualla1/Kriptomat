@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Linking, StyleSheet} from 'react-native';
+import { space } from '../constants/spacing';
 import {colors} from '../constants/theme';
 
 import Button from './Button';
@@ -19,7 +20,7 @@ function Footer() {
 
 const styles = StyleSheet.create({
   wrapper: {
-    padding: 16,
+    padding: space.normal,
     backgroundColor: colors.onPrimary,
     borderRadius: 6,
     elevation: 9,
@@ -27,7 +28,6 @@ const styles = StyleSheet.create({
     shadowColor: 'black',
     shadowOpacity: 0.16,
     shadowRadius: 6,
-    // flexShrink: 0,
   },
 });
 

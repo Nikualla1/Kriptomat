@@ -2,6 +2,7 @@ import React from 'react';
 import {View, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 
 import {colors} from '../constants/theme';
+import { space } from '../constants/spacing';
 import {CloseIcon, SearchIcon} from '../assets/svg';
 
 function SearchInput({value, onChange}) {
@@ -47,12 +48,11 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   icon: {
-    paddingHorizontal: 10,
+    paddingHorizontal: space.xs,
     width: 40,
   },
   input: {
     flex: 1,
-    fontSize: 14,
     height: 48,
     color: colors.textDefault,
     backgroundColor: colors.onPrimary,

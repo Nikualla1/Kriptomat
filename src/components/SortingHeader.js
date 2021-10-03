@@ -3,6 +3,7 @@ import {View, TouchableOpacity, StyleSheet, Text} from 'react-native';
 
 import {SortIcon} from '../assets/svg';
 import {colors} from '../constants/theme';
+import { space } from '../constants/spacing';
 import {CoinsContext} from '../context/CoinsContext';
 
 function SortingHeader(props) {
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: colors.onPrimary,
-    paddingVertical: 8,
+    paddingVertical: space.xxs,
   },
   itemWrapper: {
     flexDirection: 'row',
@@ -36,7 +37,6 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontFamily: 'Montserrat-SemiBold',
-    fontSize: 14,
     color: colors.textSecondary,
   },
 });

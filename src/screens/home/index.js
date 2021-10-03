@@ -11,6 +11,7 @@ import {
   CoinDetailsItem,
   SortingHeader,
 } from '../../components';
+import { space } from '../../constants/spacing';
 
 function HomeScreen() {
   const [searchedText, setSearchedText] = useState('');
@@ -47,7 +48,7 @@ function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 18,
+    paddingHorizontal: space.large,
     flex: 1,
   },
   seperator: {

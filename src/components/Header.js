@@ -2,6 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
 import {LogoIcon} from '../assets/svg';
+import { space } from '../constants/spacing';
 
 function Header() {
   return (
@@ -13,8 +14,8 @@ function Header() {
 
 const styles = StyleSheet.create({
   wrapper: {
-    paddingTop: 20,
-    paddingBottom: 17,
+    paddingTop: space.xl,
+    paddingBottom: space.normal,
   },
 });
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import {TouchableOpacity, StyleSheet, Text} from 'react-native';
+import { space } from '../constants/spacing';
 
 import {colors} from '../constants/theme';
 
@@ -15,10 +16,9 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.primary,
     borderRadius: 10,
-    padding: 14,
+    padding: space.small,
   },
   text: {
-    fontSize: 14,
     color: colors.onPrimary,
     alignSelf: 'center',
     fontFamily: 'Montserrat-SemiBold',
