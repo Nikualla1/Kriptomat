@@ -4,6 +4,7 @@ import {TouchableOpacity, View, Text, Image, StyleSheet} from 'react-native';
 
 import {colors} from '../constants/theme';
 import PriceChangeTicker from './PriceChangeTicker';
+import { space } from '../constants/spacing';
 
 function CoinDetailsItem({item}) {
   const navigation = useContext(NavigationContext);
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    paddingVertical: 14,
+    paddingVertical: space.small,
   },
   image: {
     width: 32,
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
   },
   infoContainer: {
     flex: 1,
-    paddingLeft: 10,
+    paddingLeft: space.xs,
   },
   itemsSeperator: {
     flexDirection: 'row',
