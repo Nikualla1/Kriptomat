@@ -3,19 +3,34 @@ import {View, Text, StyleSheet} from 'react-native';
 
 import {Ticker} from '../assets/svg';
 
-function PriceChangeTicker({percentage}) {
-  const fill = percentage >= 0 ? '#0DEAA9' : '#FF9696';
+function PriceChangeTicker(props) {
+  const {
+    percentage,
+    colors = {
+      positive: '#0DEAA9',
+      negative: '#FF9696',
+    },
+    iconSize = {
+      width: 8,
+      height: 9,
+    },
+    wrapperStyle = {},
+    textStyle = {},
+  } = props;
+  const fill = percentage >= 0 ? colors.positive : colors.negative;
   const rotate = percentage < 0 ? '180deg' : '0deg';
 
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, wrapperStyle]}>
       <Ticker
-        width={9}
-        height={9}
+        width={iconSize.width}
+        height={iconSize.height}
         fill={fill}
         style={{transform: [{rotate}]}}
       />
-      <Text style={[styles.text, {color: fill}]}>{percentage}%</Text>
+      <Text style={[styles.text, {color: fill, ...textStyle}]}>
+        {percentage}%
+      </Text>
     </View>
   );
 }
