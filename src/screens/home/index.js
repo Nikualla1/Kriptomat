@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react';
+import React, {useContext} from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 
 import {CoinsContext} from '../../context/CoinsContext';
@@ -11,12 +11,10 @@ import {
   CoinDetailsItem,
   SortingHeader,
 } from '../../components';
-import { space } from '../../constants/spacing';
+import space from '../../constants/spacing';
 
 function HomeScreen() {
-  const [searchedText, setSearchedText] = useState('');
-
-  const {loading, coinsData, onSearchText} = useContext(CoinsContext);
+  const {loading, coinsData, searchText, onSearchText} = useContext(CoinsContext);
 
   return (
     <ScreenWrapper>
@@ -24,11 +22,8 @@ function HomeScreen() {
       {loading && <Loading />}
       <View style={styles.container}>
         <SearchInput
-          value={searchedText}
-          onChange={text => {
-            setSearchedText(text);
-            onSearchText(text);
-          }}
+          value={searchText}
+          onChange={onSearchText}
         />
         <FlatList
           data={coinsData}
