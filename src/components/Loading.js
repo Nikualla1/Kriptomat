@@ -1,7 +1,7 @@
 import React from 'react';
 import {ActivityIndicator, View, StyleSheet} from 'react-native';
 
-import {colors} from '../constants/theme';
+import colors from '../constants/theme';
 
 function Loading({size = 'large'}) {
   return (
@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     top: 0,
     alignItems: 'center',
     justifyContent: 'center',
+    zIndex: 100
   },
 });
 

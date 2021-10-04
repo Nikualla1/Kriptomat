@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 
-import {colors} from '../constants/theme';
-import { space } from '../constants/spacing';
+import colors from '../constants/theme';
+import space from '../constants/spacing';
 import {CloseIcon, SearchIcon} from '../assets/svg';
 
 function SearchInput({value, onChange}) {

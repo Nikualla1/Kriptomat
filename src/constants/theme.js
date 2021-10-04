@@ -1,4 +1,4 @@
-export const colors = {
+export default colors = {
     primary: '#0E80D5',
     onPrimary: '#fff',
     statusBar: '#085FAD',

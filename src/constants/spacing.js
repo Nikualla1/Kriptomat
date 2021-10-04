@@ -1,4 +1,4 @@
-export const space = {
+export default space = {
     xxs: 8,
     xs: 10,
     small: 14,

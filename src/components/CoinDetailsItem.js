@@ -2,9 +2,10 @@ import React, {useContext} from 'react';
 import {NavigationContext} from '@react-navigation/native';
 import {TouchableOpacity, View, Text, Image, StyleSheet} from 'react-native';
 
-import {colors} from '../constants/theme';
+import colors from '../constants/theme';
+import space from '../constants/spacing';
 import PriceChangeTicker from './PriceChangeTicker';
-import { space } from '../constants/spacing';
+import {currenySymbol} from '../constants/currency';
 
 function CoinDetailsItem({item}) {
   const navigation = useContext(NavigationContext);
@@ -14,17 +15,15 @@ function CoinDetailsItem({item}) {
 
   return (
     <TouchableOpacity
-      onPress={() =>
-        navigation.navigate('Currency', item)
-      }
+      onPress={() => navigation.navigate('Currency', item)}
       style={styles.container}>
       <Image source={{uri: image}} style={styles.image} />
       <View style={styles.infoContainer}>
         <View style={styles.itemsSeperator}>
           <Text style={styles.name}>{name}</Text>
           <Text style={styles.name}>
-            {'\u20AC'}
-            {current_price}
+            {currenySymbol}
+            {current_price.toLocaleString()}
           </Text>
         </View>
         <View style={styles.itemsSeperator}>

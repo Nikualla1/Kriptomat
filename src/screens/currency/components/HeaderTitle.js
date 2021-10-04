@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet} from 'react-native';
-import { space } from '../../../constants/spacing';
+
+import space from '../../../constants/spacing';
 
 function HeaderTitle(props) {
   const {name = '', image = ''} = props;

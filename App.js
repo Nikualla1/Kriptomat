@@ -2,13 +2,13 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
+import colors from './src/constants/theme';
 import {CoinsProvider} from './src/context/CoinsContext';
 import {HomeScreen, CurrencyScreen, SearchScreen} from './src/screens';
 import {
   CurrencyHeaderTitle,
   CurrencyHeaderRight,
 } from './src/screens/currency/components';
-import {colors} from './src/constants/theme';
 
 const Stack = createNativeStackNavigator();
 

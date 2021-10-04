@@ -1,17 +1,17 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-import {colors} from '../../../constants/theme';
-import {space} from '../../../constants/spacing';
+import colors from '../../../constants/theme';
+import space from '../../../constants/spacing';
 import {PriceChangeTicker} from '../../../components';
+import { currenySymbol } from '../../../constants/currency';
 
 const RangeItem = ({label, price, style}) => {
   return (
     <View style={[styles.rangeWrapper, style]}>
       <Text style={styles.rangeLabel}>{label} </Text>
       <Text style={styles.rangePrice}>
-        {'\u20AC'}
-        {price}
+        {`${currenySymbol} ${price}`}
       </Text>
     </View>
   );
@@ -30,7 +30,7 @@ function DetailsHeader({details = {}}) {
     <View style={styles.container}>
       <View style={styles.priceWrapper}>
         <Text style={styles.price}>
-          {'\u20AC'} {current_price}
+          {`${currenySymbol} ${current_price.toLocaleString()}`}
         </Text>
         <PriceChangeTicker
           percentage={price_change_percentage_24h}
@@ -50,10 +50,10 @@ function DetailsHeader({details = {}}) {
         />
       </View>
       <View style={styles.rangeWrapper}>
-        <RangeItem label="24h Low" price={low_24h} />
+        <RangeItem label="24h Low" price={low_24h.toLocaleString()} />
         <RangeItem
           label="24h High"
-          price={high_24h}
+          price={high_24h.toLocaleString()}
           style={{paddingLeft: 24}}
         />
       </View>
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingBottom: 2,
+    paddingBottom: space.xs,
   },
   price: {
     fontSize: 28,

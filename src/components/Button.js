@@ -1,8 +1,8 @@
 import React from 'react';
 import {TouchableOpacity, StyleSheet, Text} from 'react-native';
-import { space } from '../constants/spacing';
 
-import {colors} from '../constants/theme';
+import colors from '../constants/theme';
+import space from '../constants/spacing';
 
 function Button({onPress, title, buttonStyle, textStyle}) {
   return (

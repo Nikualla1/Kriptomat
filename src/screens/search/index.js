@@ -1,6 +1,8 @@
 import React, {useState, useContext} from 'react';
 import {View, StyleSheet, FlatList} from 'react-native';
 
+import colors from '../../constants/theme';
+import space from '../../constants/spacing';
 import {CoinsContext} from '../../context/CoinsContext';
 import {
   Footer,
@@ -10,8 +12,6 @@ import {
   CoinDetailsItem,
   SortingHeader,
 } from '../../components';
-import {colors} from '../../constants/theme';
-import { space } from '../../constants/spacing';
 
 function SearchScreen() {
   const [searchedText, setSearchedText] = useState('');
@@ -19,7 +19,7 @@ function SearchScreen() {
   const {loading, coinsData, onSearchText} = useContext(CoinsContext);
 
   return (
-    <ScreenWrapper style={{backgroundColor: colors.background}}>
+    <ScreenWrapper barStyle="dark-content" style={{backgroundColor: colors.background}}>
       {loading && <Loading />}
       <View style={styles.container}>
         <SearchInput

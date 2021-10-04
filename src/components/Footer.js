@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, Linking, StyleSheet} from 'react-native';
-import { space } from '../constants/spacing';
-import {colors} from '../constants/theme';
+
+import colors from '../constants/theme';
+import space from '../constants/spacing';
 
 import Button from './Button';
 

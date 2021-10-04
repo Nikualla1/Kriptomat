@@ -2,7 +2,7 @@ import React from 'react';
 import {View, StyleSheet} from 'react-native';
 
 import {LogoIcon} from '../assets/svg';
-import { space } from '../constants/spacing';
+import space from '../constants/spacing';
 
 function Header() {
   return (

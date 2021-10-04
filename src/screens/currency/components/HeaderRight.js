@@ -2,8 +2,8 @@ import React from 'react';
 import {View, TouchableOpacity, Pressable, Platform} from 'react-native';
 
 import {SearchIcon} from '../../../assets/svg';
-import { space } from '../../../constants/spacing';
-import {colors} from '../../../constants/theme';
+import colors from '../../../constants/theme';
+import space from '../../../constants/spacing';
 
 function HeaderRight({navigation}) {
   const WrapperComponent = Platform.OS === 'ios' ? TouchableOpacity : Pressable;
