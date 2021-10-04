@@ -10,7 +10,7 @@ function ScreenWrapper(props) {
       <SafeAreaView style={styles.lowerBar}>
         <StatusBar
           backgroundColor={colors.statusBar}
-          barStyle={props.barStyle || "light-content"}
+          barStyle={props.barStyleDark ? 'dark-content' : "light-content"}
         />
         <View style={[styles.container, props.style]}>{props.children}</View>
       </SafeAreaView>

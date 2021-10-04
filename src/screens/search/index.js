@@ -1,5 +1,5 @@
 import React, {useState, useContext} from 'react';
-import {View, StyleSheet, FlatList} from 'react-native';
+import {View, StyleSheet, FlatList, Platform} from 'react-native';
 
 import colors from '../../constants/theme';
 import space from '../../constants/spacing';
@@ -19,7 +19,9 @@ function SearchScreen() {
   const {loading, coinsData, onSearchText} = useContext(CoinsContext);
 
   return (
-    <ScreenWrapper barStyle="dark-content" style={{backgroundColor: colors.background}}>
+    <ScreenWrapper
+      barStyleDark={Platform.OS === 'ios' ? true : false}
+      style={{backgroundColor: colors.background}}>
       {loading && <Loading />}
       <View style={styles.container}>
         <SearchInput
@@ -51,7 +53,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: space.large,
     flex: 1,
-    paddingTop: space.xs
+    paddingTop: space.xs,
   },
   seperator: {
     height: 1,

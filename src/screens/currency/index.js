@@ -1,12 +1,12 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
+import {ScrollView, Platform} from 'react-native';
 
 import {ScreenWrapper} from '../../components';
 import {Chart, DetailsHeader, Overview} from './components';
 
 function Currency({route}) {
   return (
-    <ScreenWrapper barStyle="dark-content">
+    <ScreenWrapper barStyleDark={Platform.OS === 'ios' ? true : false}>
       <ScrollView>
         <DetailsHeader details={route.params} />
         <Chart coinId={route.params?.id || ''} />
