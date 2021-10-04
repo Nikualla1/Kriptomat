@@ -1,19 +1,19 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {ScrollView} from 'react-native';
 
 import {ScreenWrapper} from '../../components';
-import {DetailsHeader} from './components';
+import {Chart, DetailsHeader, Overview} from './components';
 
 function Currency({route}) {
   return (
-    <ScreenWrapper>
+    <ScreenWrapper barStyle="dark-content">
       <ScrollView>
         <DetailsHeader details={route.params} />
+        <Chart coinId={route.params?.id || ''} />
+        <Overview details={route.params} />
       </ScrollView>
     </ScreenWrapper>
   );
 }
-
-const styles = StyleSheet.create({});
 
 export default Currency;

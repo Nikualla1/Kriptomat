@@ -1,4 +1,5 @@
 import Header from './Header';
+import Button from './Button';
 import Footer from './Footer';
 import Loading from './Loading';
 import SearchInput from './SearchInput';
@@ -9,6 +10,7 @@ import PriceChangeTicker from './PriceChangeTicker';
 
 export {
   Header,
+  Button,
   Footer,
   Loading,
   SearchInput,

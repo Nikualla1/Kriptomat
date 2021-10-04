@@ -1,5 +1,13 @@
+import Chart from './Chart';
+import Overview from './Overview';
+import DetailsHeader from './DetailsHeader';
 import CurrencyHeaderTitle from './HeaderTitle';
 import CurrencyHeaderRight from './HeaderRight';
-import DetailsHeader from './DetailsHeader'
 
-export {CurrencyHeaderTitle, CurrencyHeaderRight, DetailsHeader};
+export {
+  Chart,
+  Overview,
+  DetailsHeader,
+  CurrencyHeaderTitle,
+  CurrencyHeaderRight,
+};
